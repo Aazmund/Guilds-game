@@ -1,0 +1,8 @@
+﻿  main.cpp
+C:\Users\Bread\Documents\GitHub\Guilds-game\sfml_first\gen_cell.h(14,19): warning C4244:  аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
+C:\Users\Bread\Documents\GitHub\Guilds-game\sfml_first\gen_cell.h(29,15): warning C4244:  аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
+  Создание кода
+  Previous IPDB not found, fall back to full compilation.
+  Создание кода завершено
+  All 81 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  sfml_first.vcxproj -> C:\Users\Bread\Documents\GitHub\Guilds-game\x64\Release\sfml_first.exe
