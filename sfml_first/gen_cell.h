@@ -26,16 +26,16 @@ void random_square(){
 }
 
 void random_line(){
-    srand(time(NULL));
-    int pos = rand() % 2;
+    srand(time(0));
+    int pos = rand() % 2 + 1;
     switch (pos) {
-        case 0:
+        case 1:
             line_arr[0] = 1;
             line_arr[1] = 0;
             line_arr[2] = 0;
             line_arr[3] = 0;
             break;
-        case 1:
+        case 2:
             line_arr[0] = 0;
             line_arr[1] = 0;
             line_arr[2] = 0;

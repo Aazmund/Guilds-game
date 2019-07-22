@@ -11,17 +11,17 @@ Texture t_map;
 Sprite s_map;
 
 sf::String TileMap[h_map] = {
-    "01111C11110",
-    "1****C****1",
-    "1*********1",
-    "1*********1",
-    "1*********1",
+    "09999C99990",
+    "9****C****9",
+    "9*********9",
+    "9*********9",
+    "9*********9",
     "CC*******CC",
-    "1*********1",
-    "1*********1",
-    "1*********1",
-    "1****C****1",
-    "01111C11110",
+    "9*********9",
+    "9*********9",
+    "9*********9",
+    "9****C****9",
+    "09999C99990",
 };
 
 void map_generator(){
@@ -61,12 +61,37 @@ void map_generator(){
     
     int i_index = 0;
     int j_index = 0;
+    int rl = 0;
     
-    for(i_index; i_index < 11; i_index++){
-        if(TileMap[i_index][j_index] == '1'){
-            
+    //    for(i_index = 0; i_index < 11; i_index++){
+    //        std::cout << TileMap[i_index][j_index] << " ";
+    //    }
+    
+    for(i_index = 0; i_index < 11; i_index++){
+        if(TileMap[i_index][j_index] == '9'){
+            random_line();
+            for(int i = i_index; i < i_index + 4; i++){
+                TileMap[i][j_index] = line_arr[rl];
+                rl++;
+            }
         }
+        rl = 0;
     }
+    
+    j_index = 10;
+    
+    for(i_index = 0; i_index < 11; i_index++){
+        if(TileMap[i_index][j_index] == '9'){
+            random_line();
+            for(int i = i_index; i < i_index + 4; i++){
+                TileMap[i][j_index] = line_arr[rl];
+                rl++;
+            }
+        }
+        rl = 0;
+    }
+    
+    //    std::cout << std::endl << std::endl;
     
     for(int i = 0; i < 11; i++){
         for(int j = 0; j < 11; j++){
@@ -76,4 +101,3 @@ void map_generator(){
     }
     
 }
-
