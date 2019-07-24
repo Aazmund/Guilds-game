@@ -62,10 +62,7 @@ void map_generator(){
     int i_index = 0;
     int j_index = 0;
     int rl = 0;
-    
-    //    for(i_index = 0; i_index < 11; i_index++){
-    //        std::cout << TileMap[i_index][j_index] << " ";
-    //    }
+
     
     for(i_index = 0; i_index < 11; i_index++){
         if(TileMap[i_index][j_index] == '9'){
@@ -90,9 +87,39 @@ void map_generator(){
         }
         rl = 0;
     }
-    
-    //    std::cout << std::endl << std::endl;
-    
+
+	i_index = 0;
+	j_index = 0;
+
+	for (j_index = 0; j_index < 11; j_index++) {
+		if (TileMap[i_index][j_index] == '9') {
+			random_line();
+			for (int j = j_index; j < j_index + 4; j++) {
+				TileMap[i_index][j] = line_arr[rl];
+				rl++;
+			}
+		}
+		rl = 0;
+	}
+
+	i_index = 10;
+
+	for (j_index = 0; j_index < 11; j_index++) {
+		if (TileMap[i_index][j_index] == '9') {
+			random_line();
+			for (int j = j_index; j < j_index + 4; j++) {
+				TileMap[i_index][j] = line_arr[rl];
+				rl++;
+			}
+		}
+		rl = 0;
+	}
+	
+	/* //вывод pos
+	for (int i = 0; i < 20; i++) {
+		std::cout << pos << std::endl;
+	}
+	*/
     for(int i = 0; i < 11; i++){
         for(int j = 0; j < 11; j++){
             std::cout << TileMap[i][j] << " ";

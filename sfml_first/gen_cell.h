@@ -4,6 +4,7 @@
 int arr[4];
 int line_arr[4];
 
+int pos = 0;
 int a = 0;
 int b = 0;
 int c = 0;
@@ -23,11 +24,14 @@ void random_square(){
     arr[1] = b;
     arr[2] = c;
     arr[3] = d;
+
+
 }
 
+
 void random_line(){
-    srand(time(0));
-    int pos = rand() % 2 + 1;
+	srand(time(0));
+    pos = rand() % 2 + 1;
     switch (pos) {
         case 1:
             line_arr[0] = 1;

@@ -1,4 +1,4 @@
 ﻿  main.cpp
-C:\Users\Bread\Documents\GitHub\Guilds-game\sfml_first\gen_cell.h(14,19): warning C4244:  аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
-C:\Users\Bread\Documents\GitHub\Guilds-game\sfml_first\gen_cell.h(29,15): warning C4244:  аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
+C:\Users\Bread\Documents\GitHub\Guilds-game\sfml_first\gen_cell.h(15,19): warning C4244:  аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
+C:\Users\Bread\Documents\GitHub\Guilds-game\sfml_first\gen_cell.h(33,12): warning C4244:  аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
   sfml_first.vcxproj -> C:\Users\Bread\Documents\GitHub\Guilds-game\x64\Debug\sfml_first.exe
