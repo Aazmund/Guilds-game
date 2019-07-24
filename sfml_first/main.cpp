@@ -6,7 +6,7 @@
 using namespace sf;
 
 int main(){
-    
+	srand(time(0));
     random_square();
     map_generator();
     

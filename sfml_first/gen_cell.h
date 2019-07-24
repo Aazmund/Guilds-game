@@ -12,7 +12,6 @@ int d = 0;
 
 void random_square(){
     while (a == b || a == c || b == c) {
-        srand(time(0));
         a = rand() % 4 + 1;
         b = rand() % 4 + 1;
         c = rand() % 4 + 1;
@@ -30,7 +29,6 @@ void random_square(){
 
 
 void random_line(){
-	srand(time(0));
     pos = rand() % 2 + 1;
     switch (pos) {
         case 1:

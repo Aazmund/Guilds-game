@@ -115,11 +115,6 @@ void map_generator(){
 		rl = 0;
 	}
 	
-	/* //вывод pos
-	for (int i = 0; i < 20; i++) {
-		std::cout << pos << std::endl;
-	}
-	*/
     for(int i = 0; i < 11; i++){
         for(int j = 0; j < 11; j++){
             std::cout << TileMap[i][j] << " ";
