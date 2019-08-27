@@ -52,17 +52,4 @@ void mix_special_cell(){
         int j = rand() % (i + 1);
         std::swap(special_cells[i], special_cells[j]);
     }
-//    for (int i = 9; i >= 0; i--) {
-//        std::cout << arr[i] << " ";
-//    }
-    
-//    int arr[4] = { 1, 2, 3, 4 };
-//    for (int i = 3; i >= 0; i--) {
-//        int j = rand() % (i + 1);
-//        std::swap(arr[i], arr[j]);
-//    }
-//    for (int i = 3; i >= 0; i--) {
-//            std::cout << arr[i] << " ";
-//            }
-    
 }

@@ -45,7 +45,7 @@ void map_generator(){
     for (int i = 0; i < h_map; i++) {
         for (int j = 0; j < w_map; j++) {
             
-            if(TileMap[i][j] == '72'){
+            if(TileMap[i][j] == '7'){
                 switch (int(arr[counter])) {
                     case 1:
                         counter++;
@@ -131,12 +131,4 @@ void map_generator(){
 	}
 	
     test_map_filing();
-    
-    for(int i = 0; i < 11; i++){
-        for(int j = 0; j < 11; j++){
-            std::cout << TileMap[i][j] << "      ";
-        }
-        std::cout<<std::endl;
-    }
-    
 }

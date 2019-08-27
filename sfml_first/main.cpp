@@ -11,8 +11,6 @@ int main(){
     mix_special_cell();
     map_generator();
     
-    //create_line();
-    
     RenderWindow window(sf::VideoMode(640, 480), "qq");
     
     Port cell;
