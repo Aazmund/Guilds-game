@@ -11,18 +11,33 @@ Texture t_map;
 Sprite s_map;
 
 sf::String TileMap[h_map] = {
-    "09999C99990",
-    "9****C****9",
-    "9*********9",
-    "9*********9",
-    "9*********9",
+    "79999C99997",
+    "9**01C10**9",
+    "9*0*****0*9",
+    "90*******09",
+    "91*******19",
     "CC*******CC",
-    "9*********9",
-    "9*********9",
-    "9*********9",
-    "9****C****9",
-    "09999C99990",
+    "91*******19",
+    "90*******09",
+    "9*0*****0*9",
+    "9**01C10**9",
+    "79999C99997",
 };
+
+void test_map_filing(){
+    int counter = 0;
+    for(int i = 0; i < h_map; i++){
+        for (int j = 0; j < w_map; j++) {
+            if(int(TileMap[i][j]) == 49 || TileMap[i][j] == 1){
+                TileMap[i][j] = special_cells[counter];
+                counter++;
+            }
+            if (int(TileMap[i][j]) == 48) {
+                TileMap[i][j] = 0;
+            }
+        }
+    }
+}
 
 void map_generator(){
     
@@ -30,7 +45,7 @@ void map_generator(){
     for (int i = 0; i < h_map; i++) {
         for (int j = 0; j < w_map; j++) {
             
-            if(TileMap[i][j] == '0'){
+            if(TileMap[i][j] == '72'){
                 switch (int(arr[counter])) {
                     case 1:
                         counter++;
@@ -115,9 +130,11 @@ void map_generator(){
 		rl = 0;
 	}
 	
+    test_map_filing();
+    
     for(int i = 0; i < 11; i++){
         for(int j = 0; j < 11; j++){
-            std::cout << TileMap[i][j] << " ";
+            std::cout << TileMap[i][j] << "      ";
         }
         std::cout<<std::endl;
     }

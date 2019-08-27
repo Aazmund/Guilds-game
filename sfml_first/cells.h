@@ -27,7 +27,7 @@ public:
     }
     
     Port(){
-        image.loadFromFile("images/image.png");
+        image.loadFromFile("./images/image.png");
         texture.loadFromImage(image);
         sprite.setTexture(texture);
         sprite.setTextureRect(IntRect(0,0,32,32));
@@ -72,7 +72,7 @@ public:
     }
     
     Sowmill(){
-        image.loadFromFile("images/image.png");
+        image.loadFromFile("./images/image.png");
         texture.loadFromImage(image);
         sprite.setTexture(texture);
         sprite.setTextureRect(IntRect(96,0,32,32));
@@ -117,7 +117,7 @@ public:
     }
     
     Horse(){
-        image.loadFromFile("images/image.png");
+        image.loadFromFile("./images/image.png");
         texture.loadFromImage(image);
         sprite.setTexture(texture);
         sprite.setTextureRect(IntRect(64,0,32,32));
@@ -162,7 +162,7 @@ public:
     }
     
     Mine(){
-        image.loadFromFile("images/map.png");
+        image.loadFromFile("/images/map.png");
         texture.loadFromImage(image);
         sprite.setTexture(texture);
         sprite.setTextureRect(IntRect(96,0,32,32));

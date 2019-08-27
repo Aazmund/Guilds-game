@@ -8,9 +8,10 @@ using namespace sf;
 int main(){
 	srand(time(0));
     random_square();
+    mix_special_cell();
     map_generator();
     
-    
+    //create_line();
     
     RenderWindow window(sf::VideoMode(640, 480), "qq");
     

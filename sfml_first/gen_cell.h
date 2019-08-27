@@ -3,6 +3,7 @@
 
 int arr[4];
 int line_arr[4];
+int special_cells[16] = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16};
 
 int pos = 0;
 int a = 0;
@@ -44,4 +45,24 @@ void random_line(){
             line_arr[3] = 1;
             break;
     }
+}
+
+void mix_special_cell(){
+    for (int i = 15; i >= 0; i--) {
+        int j = rand() % (i + 1);
+        std::swap(special_cells[i], special_cells[j]);
+    }
+//    for (int i = 9; i >= 0; i--) {
+//        std::cout << arr[i] << " ";
+//    }
+    
+//    int arr[4] = { 1, 2, 3, 4 };
+//    for (int i = 3; i >= 0; i--) {
+//        int j = rand() % (i + 1);
+//        std::swap(arr[i], arr[j]);
+//    }
+//    for (int i = 3; i >= 0; i--) {
+//            std::cout << arr[i] << " ";
+//            }
+    
 }
