@@ -96,6 +96,7 @@ public:
 	}
 };
 
+
 class Mine : public Cell {
 public:
 	Mine(Vector2f position)
@@ -108,5 +109,20 @@ public:
 	void action()
 	{
 		printf("mine action\n");
+	}
+};
+
+class emptyCell : public Cell {
+public:
+	emptyCell(Vector2f position)
+	{
+		x = position.x;
+		y = position.y;
+		setSprite("./images/image.png", IntRect(140, 0, 32, 32));
+	}
+
+	void action()
+	{
+		printf("empty action\n");
 	}
 };
