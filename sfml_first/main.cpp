@@ -22,20 +22,22 @@ int main(){
 
 	for (int i = 0; i < h_map; i++)
 		for (int j = 0; j < w_map; j++)
-			if (TileMap[i][j] == 'P' || TileMap[i][j] == 'S' || TileMap[i][j] == 'H' || TileMap[i][j] == 'M')
+		{
+			Vector2f currPos(j * 32, i * 32);
+			switch (TileMap[i][j])
 			{
-				switch (TileMap[i][j])
-				{
-				case 'P': cells.push_back(new Port(Vector2f(j * 32, i * 32))); break;
-				case 'S': cells.push_back(new Sowmill(Vector2f(j * 32, i * 32))); break;
-				case 'H': cells.push_back(new Horse(Vector2f(j * 32, i * 32))); break;
-				case 'M': cells.push_back(new Mine(Vector2f(j * 32, i * 32))); break;
-				}
+			case 'P': cells.push_back(new Port(currPos)); break;
+			case 'S': cells.push_back(new Sowmill(currPos)); break;
+			case 'H': cells.push_back(new Horse(currPos)); break;
+			case 'M': cells.push_back(new Mine(currPos)); break;
+			case 0: cells.push_back(new zeroCell(currPos)); break;
+			case 1: case 2: case 3: case 4: case 5: case 6: case 7: case 8: case 9: case 10: case 11: case 12: case 13: case 14: case 15: case 16: cells.push_back(new oneCell(currPos)); break;
+			case '*': cells.push_back(new emptyCell(currPos)); break;
+			case 'C': cells.push_back(new transitCell(currPos)); break;
 			}
-			else
-			{
-				cells.push_back(new emptyCell(Vector2f(j * 32, i * 32)));
-			}
+		}
+
+	printf("2%c2%c2\n", 1, 49);
     
 	for (Cell* i : cells)
 	{

@@ -57,7 +57,7 @@ public:
 	{
 		x = position.x;
 		y = position.y;
-		setSprite("./images/image.png", IntRect(0, 0, 32, 32));
+		setSprite("./images/mpImage.png", IntRect(160, 0, 32, 32));
 	}
 
 	void action()
@@ -72,7 +72,7 @@ public:
 	{
 		x = position.x;
 		y = position.y;
-		setSprite("./images/image.png", IntRect(96, 0, 32, 32));
+		setSprite("./images/mpImage.png", IntRect(192, 0, 32, 32));
 	}
 
 	void action()
@@ -87,7 +87,7 @@ public:
 	{
 		x = position.x;
 		y = position.y;
-		setSprite("./images/image.png", IntRect(64, 0, 32, 32));
+		setSprite("./images/mpImage.png", IntRect(224, 0, 32, 32));
 	}
 
 	void action()
@@ -103,7 +103,7 @@ public:
 	{
 		x = position.x;
 		y = position.y;
-		setSprite("./images/image.png", IntRect(96, 0, 32, 32));
+		setSprite("./images/mpImage.png", IntRect(256, 0, 32, 32));
 	}
 
 	void action()
@@ -118,11 +118,56 @@ public:
 	{
 		x = position.x;
 		y = position.y;
-		setSprite("./images/image.png", IntRect(140, 0, 32, 32));
+		setSprite("./images/mpImage.png", IntRect(96, 0, 32, 32));
 	}
 
 	void action()
 	{
 		printf("empty action\n");
+	}
+};
+
+class zeroCell : public Cell {
+public:
+	zeroCell(Vector2f position)
+	{
+		x = position.x;
+		y = position.y;
+		setSprite("./images/mpImage.png", IntRect(32, 0, 32, 32));
+	}
+
+	void action()
+	{
+		printf("zero circle action\n");
+	}
+};
+
+class oneCell : public Cell {
+public:
+	oneCell(Vector2f position)
+	{
+		x = position.x;
+		y = position.y;
+		setSprite("./images/mpImage.png", IntRect(0, 0, 32, 32));
+	}
+
+	void action()
+	{
+		printf("outer circle action\n");
+	}
+};
+
+class transitCell : public Cell {
+public:
+	transitCell(Vector2f position)
+	{
+		x = position.x;
+		y = position.y;
+		setSprite("./images/mpImage.png", IntRect(128, 0, 32, 32));
+	}
+
+	void action()
+	{
+		printf("C action\n");
 	}
 };
