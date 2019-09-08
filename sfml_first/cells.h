@@ -255,15 +255,28 @@ public:
 };
 
 class Player : public GameDrawable {
-public:
+private:
 	Cell* curretnCell;
 
+public:
 	Player(Cell* currCell) : curretnCell(currCell)
 	{
 		spriteSize = Vector2f(32, 32);
 		x = currCell->get_x();
 		y = currCell->get_y();
 		setSprite("./images/playerImg.png", IntRect(0, 0, spriteSize.x, spriteSize.y));
+	}
+
+	Cell* getCurrentCell()
+	{
+		return curretnCell;
+	}
+
+	void moveToCell(Cell* cl)
+	{
+		x = cl->get_x();
+		y = cl->get_y();
+		sprite.setPosition(x, y);
 	}
 
 	void action()

@@ -52,14 +52,14 @@ int main() {
 
 		for (Cell* c : cells)
 		{
+			if (Mouse::isButtonPressed(Mouse::Left))
+				break;
 			if (emptyCell * cl = dynamic_cast<emptyCell*>(c))
 				continue;
 			if (c->isPointOverSprite(Mouse::getPosition(window)))
-				if (Mouse::isButtonPressed(Mouse::Left))
-					c->setSpritePressed();
-				else
-					c->setSpriteHovered();
-			else c->setSpriteActive();
+				c->setSpriteHovered();
+			else
+				c->setSpriteActive();
 		}
 
 		Event event;
@@ -84,8 +84,12 @@ int main() {
 
 					for (Cell* c : cells)
 					{
+						if (emptyCell * cl = dynamic_cast<emptyCell*>(c))
+							continue;
 						if (c->isPointOverSprite(mousePos))
 						{
+							c->setSpritePressed();
+							players[rand() % players.size()]->moveToCell(c);
 							c->action();
 						}
 					}
